@@ -1,0 +1,323 @@
+.glass-grey 
+{
+    -fx-background-color: 
+        #c3c4c4,
+        linear-gradient(#d6d6d6 50%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+}
+
+.green-border 
+{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+    -fx-border-color: lightgreen;
+    -fx-border-width: 2px;
+    -fx-border-radius: 50%;
+}
+
+.save-Button 
+{
+  -fx-display: flex;
+  -fx-flex-direction: column;
+  -fx-align-items: center;
+  -fx-padding: 6px 14px;
+  -fx-font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  -fx-border-radius: 6px;
+  -fx-border-width: 0;
+  -fx-background-color: linear-gradient(#4B91F7, #367AF6);
+  -fx-background-radius: 6px;
+  -fx-background-insets: 0;
+  -fx-text-fill: white;
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+  -fx-user-select: none;
+  -fx-touch-action: manipulation;
+   -fx-min-width: 120;
+  -fx-max-width: 160;
+}
+
+.save-Button:hover {
+  -fx-background-color: linear-gradient(#4B91F7, #367AF6, #3366E6);
+}
+
+.end-Button {
+  -fx-display: flex;
+  -fx-flex-direction: column;
+  -fx-align-items: center;
+  -fx-padding: 6px 14px;
+  -fx-font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  -fx-border-radius: 6px;
+  -fx-border-width: 0;
+  -fx-background-color: linear-gradient(#FF5F5F, #FF3737); /* Updated color values */
+  -fx-background-radius: 6px;
+  -fx-background-insets: 0;
+  -fx-text-fill: white;
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+  -fx-user-select: none;
+  -fx-touch-action: manipulation;
+  -fx-min-width: 100;
+  -fx-max-width: 160;
+}
+
+.end-Button:hover {
+  -fx-background-color: linear-gradient(#FF5F5F, #FF3737, #E63030); /* Updated hover color values */
+}
+
+.aprrove-Button {
+  -fx-display: flex;
+  -fx-flex-direction: column;
+  -fx-align-items: center;
+  -fx-padding: 6px 14px;
+  -fx-font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  -fx-border-radius: 6px;
+  -fx-border-width: 0;
+  -fx-background-color: linear-gradient(#80C862, #61B14E); /* Updated color values */
+  -fx-background-radius: 6px;
+  -fx-background-insets: 0;
+  -fx-text-fill: white;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 3, 0.0, 0, 1);
+  -fx-user-select: none;
+  -fx-touch-action: manipulation;
+  -fx-min-width: 120;
+  -fx-max-width: 160;
+}
+
+.aprrove-Button:hover {
+  -fx-background-color: linear-gradient(#80C862, #61B14E, #55A845); /* Updated color values */
+}
+
+
+.button-13 {
+  -fx-background-color: #fafafa;
+  -fx-border-color: #d5d9d9;
+  -fx-border-width: 1px;
+  -fx-border-radius: 8px;
+  -fx-background-radius: 8px;
+  -fx-box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  -fx-box-sizing: border-box;
+  -fx-text-fill: #0f1111;
+  -fx-cursor: hand;
+  -fx-display: inline-block;
+  -fx-font-family: "Amazon Ember", sans-serif;
+  -fx-font-size: 13px;
+  -fx-line-height: 29px;
+  -fx-padding: 0 10px 0 11px;
+  -fx-position: relative;
+  -fx-alignment: center;
+  -fx-text-alignment: center;
+  -fx-text-decoration: none;
+  -fx-opacity: 1;
+  -fx-user-select: none;
+  -fx-touch-action: manipulation;
+  -fx-vertical-align: middle;
+  -fx-min-width: 200px;
+  -fx-max-width: 200px;
+}
+
+
+
+.button-13:hover {
+  -fx-background-color: #f2f2f2;
+  -fx-box-shadow: rgba(213, 217, 217, 0.8) 0 4px 8px 0;
+}
+.button-13:focused {
+  -fx-border-color: #008296;
+  -fx-box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  -fx-outline: none;
+} 
+
+.vbox {
+  display: inline-block;
+  -fx-min-width: 50px;
+  -fx-max-width: 50px;
+  -fx-background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+  -fx-border-color: darkblue;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+  -fx-padding: 10px;
+  -fx-translate-y: 100%; /* Start offscreen */
+  -fx-transition: opacity 0.5s, -fx-translate-y 0.5s;
+  -fx-opacity: 0;
+  -fx-translate-y: 0; /* Slide in from top */
+  -fx-background-radius: 5px 0 0 0; /* Apply border radius to top-left corner only */
+}
+
+.vboxHide 
+{
+  width: 32px;
+  height: 49px;
+    -fx-opacity: 0;
+   -fx-pick-on-bounds: false; /* Disable picking on bounds to prevent mouse events */
+   -fx-pointer-events: none; /* Prevent pointer events on the disabled VBox */
+}
+
+.vboxShow 
+{
+  display: inline-block;
+  width: auto;
+  height: auto;
+  -fx-background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+  -fx-border-color: darkblue;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+  -fx-padding: 10px;
+  -fx-translate-y: 100%; /* Start offscreen */
+  -fx-transition: opacity 0.5s, -fx-translate-y 0.5s;
+  -fx-opacity: 1;
+  -fx-translate-y: 0; /* Slide in from top */
+  -fx-background-radius: 5px 0 0 0; /* Apply border radius to top-left corner only */
+}
+
+.light-blue-label 
+{
+  -fx-background-color: rgba(255, 255, 255, 0.5); /* Transparent white */
+  -fx-text-fill: darkblue;
+  -fx-font-weight: bold;
+  -fx-padding: 5px;
+  -fx-border-color: darkblue;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+}
+
+.vboxQuestion 
+{
+    -fx-background-color: white;
+    -fx-border-color: rgba(0, 0, 0, 0.2);
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 5, 0, 0, 1);
+}
+
+.offwhite-pane 
+{
+    -fx-background-color: white;
+}
+
+
+.label 
+{
+  font-weight: bold;
+}
+
+
+.myBorderPane {
+  -fx-border-color: black;
+  -fx-border-width: 6px;
+  -fx-border-style: solid;
+  -fx-effect: dropshadow(gaussian, black, 15, 0, 0, 15);
+}
+
+.vbox-border {
+    -fx-background-color: transparent; /* Set the background color as transparent */
+    -fx-border-color: #00a9e0; /* Set the desired light blue border color */
+    -fx-border-width: 1px; /* Set the border width */
+    -fx-border-radius: 5px; /* Set the border corner radius */
+}
+
+.vbox-border > Label {
+    -fx-effect: none; /* Disable the shadow effect specifically for labels */
+}
+
+.None 
+{
+  -fx-text-fill: black;
+  -fx-font-weight: bold;
+   -fx-font-size: 14px;
+}
+
+.Denied 
+{
+  -fx-text-fill: red;
+  -fx-font-weight: bold;
+   -fx-font-size: 14px;
+}
+
+.Approved 
+{
+  -fx-text-fill: green;
+  -fx-font-weight: bold;
+   -fx-font-size: 14px;
+}
+
+.Pending 
+{
+  -fx-text-fill: orange;
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
+}
+
+.ongion_exams {
+  -fx-font-family: 'Heebo', sans-serif;
+  -fx-font-weight: bold;
+  -fx-font-style: normal;
+  -fx-text-transform: capitalize;
+  -fx-text-fill: #00ff00; 
+  -fx-background-color: white;
+  -fx-border-color: #11ff00;
+  -fx-border-width: 2px; /* Set the border width */
+  -fx-border-radius: 10px; /* Set a higher border corner radius for more rounded background */
+  -fx-background-radius: 10px; /* Set the background corner radius */
+}
+
+.orange-label {
+  -fx-font-family: 'Heebo', sans-serif;
+  -fx-font-weight: bold;
+  -fx-font-style: normal;
+  -fx-text-transform: capitalize;
+  -fx-text-fill: #ff9900; /* Use an orange shade for the text */
+  -fx-background-color: white;
+  -fx-border-color: #ff9900; /* Use an orange shade for the border */
+  -fx-border-width: 2px;
+    -fx-border-radius: 10px; /* Set a higher border corner radius for more rounded background */
+  -fx-background-radius: 10px;
+}
+
+
+.blue-border-pane {
+  -fx-border-color: #4B91F7;
+  -fx-border-width: 1px;
+  -fx-border-radius: 4px;
+  -fx-padding: 10px;
+}
+
+.blue-border-pane .title {
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #4B91F7;
+  -fx-padding: 0 0 10px 0;
+}
+
+.blue-border-pane .content {
+  -fx-padding: 10px;
+}
+
+.blue-border-pane .button {
+  -fx-background-color: #4B91F7;
+  -fx-text-fill: white;
+  -fx-padding: 6px 14px;
+  -fx-font-size: 14px;
+  -fx-border-radius: 4px;
+  -fx-border-width: 0;
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+  -fx-cursor: hand;
+}
+
+.blue-border-pane .button:hover {
+  -fx-background-color: #3366E6;
+}
+
+.blue-border-pane .text {
+  -fx-font-size: 14px;
+  -fx-text-fill: #333333;
+  -fx-padding: 5px;
+  -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.2) , 2, 0.0 , 0 , 1 );
+}
+
+.blue-border-pane .text.highlighted {
+  -fx-background-color: #4B91F7;
+  -fx-text-fill: white;
+  -fx-padding: 5px;
+  -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.2) , 2, 0.0 , 0 , 1 );
+}

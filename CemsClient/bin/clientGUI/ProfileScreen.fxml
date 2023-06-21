@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" styleClass="cemsBackground" stylesheets="@../resources/cemsStyle.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUI.ProfileScreenController">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="599.0">
+         <children>
+            <ImageView fx:id="picture" fitHeight="137.0" fitWidth="139.0" layoutX="231.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.34736841917037964" green="0.34093567728996277" blue="0.34093567728996277" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <VBox layoutX="235.0" layoutY="186.0">
+               <children>
+                  <Label fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" styleClass="blackColorLabel">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userRolelabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" styleClass="blackColorLabel" textFill="#cacacc">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="editClick" layoutX="240.0" layoutY="267.0" mnemonicParsing="false" onMouseClicked="#updateProfilePic" text="Edit Profile">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="approve-Button" />
+                  <String fx:value="genericButtonPressed" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="74.0" prefWidth="600.0" styleClass="backGround" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="31.0" layoutX="560.0" layoutY="14.0" fx:id="xButton">
+               <image>
+                  <Image url="@../images/X.png" />
+               </image>
+               <styleClass>
+                  <String fx:value="exit" />
+                  <String fx:value="end-Button" />
+               </styleClass>
+            </ImageView>
+            <Button fx:id="left_arrow_image" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" styleClass="backArrow-button" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

@@ -1,0 +1,79 @@
+.notebook-textarea {
+    -fx-background-color: white;
+    -fx-background-insets: 2px;
+    -fx-padding: 0px; /* Adjusted padding value */
+    -fx-border-color: blue;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-font-family: Arial;
+    -fx-font-size: 16px;
+    -fx-line-spacing: 1.5;
+    -fx-control-inner-background: transparent;
+    -fx-control-inner-border: transparent;
+    -fx-highlight-fill: transparent;
+    -fx-highlight-text-fill: black;
+    -fx-text-fill: black;
+}
+
+.notebook-textarea .content {
+	    /* other styles */
+	-fx-background-color: white;
+	-fx-font-size: 2em;
+    -fx-text-fill: black;
+}
+
+.answers-textarea{
+	-fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-padding: 2px;
+    -fx-border-color: blue;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-font-family: Arial;
+    -fx-line-spacing: 1;
+    -fx-control-inner-background: transparent;
+    -fx-control-inner-border: transparent;
+    -fx-highlight-fill: transparent;
+    -fx-highlight-text-fill: black;
+    -fx-text-fill: black;
+}
+
+.answers-textarea .content {
+	-fx-font-size: 2em;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.answers-textarea .content:hover {
+	-fx-border-color: rgba(0, 255, 0, 1);
+}
+
+.next-button:hover {
+	-fx-border-color: rgba(0, 255, 0, 0.3);
+}
+
+.next-button:pressed{
+	-fx-border-color: rgba(0, 255, 0, 0.3);
+}
+
+.back-button:hover {
+	-fx-border-color: rgba(255, 0, 0, 0.3);
+}
+
+.back-button:pressed{
+	-fx-border-color: rgba(255, 0, 0, 0.5);
+}
+
+
+.unradio-button {
+    -fx-mark-color: white;
+    -fx-text-fill: white;
+}
+
+.radio-button:selected {
+    -fx-mark-color: green;
+}
+
+.radio-button:not(:selected) .radio {
+    -fx-mark-color: blue;
+}

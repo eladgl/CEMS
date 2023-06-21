@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1098.0" styleClass="cemsBackground" stylesheets="@../resources/cemsStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teacherUi.EditQuestionController">
+   <children>
+      <ImageView fitHeight="232.0" fitWidth="320.0" layoutX="425.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/cems-logo.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="questions_table" layoutX="648.0" layoutY="120.0" onMouseClicked="#rowClicked" prefHeight="501.0" prefWidth="438.0">
+        <columns>
+          <TableColumn fx:id="id_column" prefWidth="54.4000244140625" text="ID" />
+          <TableColumn fx:id="number_column" prefWidth="53.60003662109375" text="Number" />
+            <TableColumn fx:id="description_column" prefWidth="218.0" text="Description" />
+            <TableColumn fx:id="course_col" prefWidth="109.0" text="Course" />
+        </columns>
+      </TableView>
+      <Button fx:id="editBtn" layoutX="60.0" layoutY="726.0" mnemonicParsing="false" onAction="#editAction" prefHeight="31.0" prefWidth="132.0" styleClass="save-Button" stylesheets="@../resources/QuestionBankStyle.css" text="Edit" />
+      <TextArea fx:id="description_field" layoutX="136.0" layoutY="256.0" prefHeight="140.0" prefWidth="476.0" styleClass="custom-text-field" stylesheets="@../resources/studentStyles.css" />
+      <TextField fx:id="number_field" layoutX="136.0" layoutY="212.0" prefHeight="25.0" prefWidth="107.0" styleClass="custom-text-field" />
+      <Text fill="#0900ff" layoutX="61.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blueColorLabel" text="Description:" wrappingWidth="84.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#0900ff" layoutX="63.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blueColorLabel" text="Number : ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <Text fill="#0d00ff" layoutX="68.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blueColorLabel" text="ID : " wrappingWidth="39.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="choice1Text" layoutX="134.0" layoutY="426.0" prefHeight="38.0" prefWidth="476.0" styleClass="custom-text-field" />
+      <Label layoutX="110.0" layoutY="432.0" styleClass="blueColorLabel" text="1.">
+         <font>
+            <Font name="David Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="choice2Text" layoutX="134.0" layoutY="474.0" prefHeight="38.0" prefWidth="476.0" styleClass="custom-text-field" />
+      <Label layoutX="110.0" layoutY="480.0" styleClass="blueColorLabel" text="2.">
+         <font>
+            <Font name="David Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="choice3Text" layoutX="134.0" layoutY="525.0" prefHeight="38.0" prefWidth="476.0" styleClass="custom-text-field" />
+      <Label layoutX="110.0" layoutY="531.0" styleClass="blueColorLabel" text="3.">
+         <font>
+            <Font name="David Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="choice4Text" layoutX="134.0" layoutY="576.0" prefHeight="38.0" prefWidth="476.0" styleClass="custom-text-field" />
+      <Label layoutX="110.0" layoutY="581.0" styleClass="blueColorLabel" text="4.">
+         <font>
+            <Font name="David Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="644.0" layoutY="88.0" styleClass="blueColorLabel" text="My Bank" textFill="#04d5ff">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="editLabel" layoutX="710.0" layoutY="657.0" prefHeight="100.0" prefWidth="329.0" />
+      <Label layoutX="57.0" layoutY="396.0" prefHeight="18.0" prefWidth="69.0" styleClass="blueColorLabel" text="  Choices: ">
+         <font>
+            <Font name="David Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="636.0" prefHeight="21.0" prefWidth="132.0" styleClass="blueColorLabel" text="Relevant Cources:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="relevantCourseLabel" layoutX="199.0" layoutY="636.0" prefHeight="21.0" prefWidth="141.0" textFill="#04833d">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="IDLabel" layoutX="136.0" layoutY="168.0" prefHeight="17.0" prefWidth="88.0" textFill="DEEPSKYBLUE">
+         <font>
+            <Font name="David Bold" size="15.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="choice1" layoutX="67.0" layoutY="437.0" mnemonicParsing="false" />
+      <RadioButton fx:id="choice2" layoutX="67.0" layoutY="485.0" mnemonicParsing="false" />
+      <RadioButton fx:id="choice3" layoutX="67.0" layoutY="536.0" mnemonicParsing="false" />
+      <RadioButton fx:id="choice4" layoutX="67.0" layoutY="586.0" mnemonicParsing="false" />
+      <AnchorPane layoutX="-3.0" prefWidth="1100.0" style="-fx-border-color: black;" styleClass="backGround">
+         <children>
+            <Label layoutX="126.0" layoutY="10.0" prefHeight="31.0" prefWidth="88.0" styleClass="title" text="subject:">
+               <font>
+                  <Font name="David Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="subjectLabel" layoutX="224.0" layoutY="11.0" prefHeight="31.0" prefWidth="200.0" styleClass="blueColorLabel" textFill="#1693f7">
+               <font>
+                  <Font name="David Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="508.0" layoutY="10.0" styleClass="title" text="Edit Question" textFill="#1693f7">
+               <font>
+                  <Font name="David Bold" size="38.0" />
+               </font>
+            </Label>
+            <Button fx:id="left_arrow_image" layoutX="8.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#backImageClicked">
+               <styleClass>
+                  <String fx:value="backArrow-button" />
+                  <String fx:value="exit" />
+               </styleClass>
+            </Button>
+            <Button layoutX="1071.0" layoutY="-1.0" mnemonicParsing="false" fx:id="xButton">
+               <styleClass>
+                  <String fx:value="exit-button" />
+                  <String fx:value="exit" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>

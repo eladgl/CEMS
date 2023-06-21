@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane styleClass="cemsBackground" stylesheets="@../resources/cemsStyle.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentUi.ManualTestExam">
+   <center>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="322.0" prefWidth="697.0">
+         <children>
+            <AnchorPane fx:id="operation_container" layoutX="195.0" layoutY="60.0" onMouseClicked="#performTheCurrentScreenActionIfClicked" prefHeight="111.0" prefWidth="210.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0400ffcb" height="88.0" layoutX="13.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="228.0" />
+                  <ImageView fitHeight="46.0" fitWidth="43.0" layoutX="178.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/download.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="current_screen_label" layoutX="62.0" layoutY="29.0" prefHeight="65.0" prefWidth="118.0" text="Download&#10;Exam" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="336.0" layoutY="20.0">
+               <children>
+                  <Label text="Time Left : ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="timerLabel" layoutX="95.0" prefHeight="27.0" prefWidth="74.0" text="01:30:00">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label fx:id="no_selected_file_label" layoutX="39.0" layoutY="174.0" prefHeight="18.0" prefWidth="135.0" textFill="RED">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="140.0" layoutY="240.0">
+               <children>
+                  <Line fx:id="line_between_circles" endX="49.0" endY="1.0" layoutX="171.0" layoutY="22.0" startX="-104.0" startY="1.0" strokeWidth="4.0" />
+                  <Label layoutY="48.0" text="Download Exam" textFill="#00000099">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Circle fx:id="second_circle" fill="#848484" layoutX="244.0" layoutY="23.0" radius="22.0" stroke="#ffffff00" strokeType="INSIDE" />
+                  <Label layoutX="238.0" layoutY="8.0" text="2" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="188.0" layoutY="48.0" text="Upload Exam" textFill="#00000099">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Circle fx:id="first_circle" fill="DODGERBLUE" layoutX="45.0" layoutY="24.0" radius="22.0" stroke="#ffffff00" strokeType="INSIDE" />
+                  <Label layoutX="39.0" layoutY="10.0" text="1" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="correct_image_popup" fitHeight="31.0" fitWidth="33.0" layoutX="29.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="next_button" layoutX="467.0" layoutY="255.0" mnemonicParsing="false" onAction="#nextButtonAction" style="-fx-background-radius: 10;" text="Next">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="74.0" prefWidth="700.0" style="-fx-border-color: black;" styleClass="backGround">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="254.0" layoutY="10.0" styleClass="title" text="Manual Exam Screen" textFill="#1693f7">
+               <font>
+                  <Font name="David Bold" size="38.0" />
+               </font>
+            </Label>
+            <Button layoutX="15.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#BackArrowAction" prefHeight="25.0" prefWidth="37.0">
+               <styleClass>
+                  <String fx:value="backArrow-button" />
+                  <String fx:value="exit" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

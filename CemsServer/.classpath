@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="src" path="/Utilities"/>
+	<classpathentry exported="true" kind="src" path="/OCSFServer"/>
+	<classpathentry exported="true" kind="lib" path="/Utilities/javaFX/javafx.base.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Utilities/javaFX/javafx.controls.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Utilities/javaFX/javafx.fxml.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Utilities/javaFX/javafx.graphics.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Utilities/javaFX/javafx.media.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Utilities/javaFX/javafx.swing.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Utilities/javaFX/javafx.web.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Utilities/javaFX/javafx-swt.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Utilities/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="lib" path="/Utilities/word/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="/Utilities/word/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="/Utilities/word/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="/Utilities/word/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

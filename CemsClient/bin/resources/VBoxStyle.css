@@ -1,0 +1,52 @@
+.question-vbox {
+    -fx-background-color: #f5f5f5; /* Background color */
+    -fx-padding: 10px; /* Padding around the VBox */
+    -fx-border-color: #ccc; /* Border color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Border radius */
+}
+
+.question-vbox .question-description-label {
+    -fx-font-weight: bold; /* Bold font weight for the question description label */
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.question-vbox .answer-option-label {
+    -fx-padding: 5px 0; /* Padding for each answer option label */
+    -fx-font-size: 12px;
+    -fx-text-fill: #FF0000; /* Red color */
+}
+
+.question-vbox .correct-option-label {
+    -fx-padding: 5px 0; /* Padding for each answer option label */
+    -fx-font-size: 12px;
+    -fx-text-fill: #FF0000; /* Red color */
+}
+
+.question-vbox .correct-option-label 
+{
+    -fx-padding: 5px 0; /* Padding for each answer option label */
+    -fx-font-size: 12px;
+    -fx-text-fill: #00FF00; /* Green color */
+    -fx-font-weight: bold;
+}
+
+
+
+
+
+.question-vbox .question-score-textfield 
+{
+    -fx-pref-width: 100px; /* Preferred width for the question score TextField */
+}
+
+.highlighted-vbox {
+    -fx-background-color: yellow;
+    -fx-border-width: 2px;
+}
+
+.question-vbox .image-view 
+{
+    -fx-alignment: center-right;
+}

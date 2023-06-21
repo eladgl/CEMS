@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#moveInTextFields" onKeyTyped="#moveInTextFields" prefHeight="430.0" prefWidth="661.0" styleClass="cemsBackground" stylesheets="@../resources/ServerAppScreen.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="serverUI.ServerBoundary">
+   <children>
+      <ImageView fitHeight="213.0" fitWidth="326.0" layoutX="360.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="110.0">
+         <image>
+            <Image url="@../images/cems-logo.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="1.0" layoutY="21.0" prefHeight="44.0" prefWidth="661.0" styleClass="title" text="Server Connection" textAlignment="CENTER">
+         <font>
+            <Font size="35.0" />
+            
+         </font></Label>
+      <VBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="104.0" prefHeight="303.0" prefWidth="294.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="166.0" prefHeight="30.0" prefWidth="294.0">
+               <children>
+                 <HBox alignment="CENTER" prefHeight="30.0" prefWidth="295.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="112.0" styleClass="blueColorLabel" text="IP Address">
+                           <padding>
+                              <Insets right="15.0" />
+                           </padding>
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <TextField fx:id="ip1" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="37.0" promptText="xxx" />
+                        <Label stylesheets="resources/serverFillLabels.css" text="." />
+                        <TextField fx:id="ip2" prefHeight="26.0" prefWidth="37.0" promptText="xxx" />
+                        <Label stylesheets="resources/serverFillLabels.css" text="." />
+                        <TextField fx:id="ip3" prefHeight="26.0" prefWidth="37.0" promptText="xxx" />
+                        <Label stylesheets="resources/serverFillLabels.css" text="." />
+                        <TextField fx:id="ip4" alignment="CENTER" prefHeight="26.0" prefWidth="37.0" promptText="xxx" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="29.0" prefWidth="189.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="112.0" styleClass="blueColorLabel" text="Port">
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <TextField fx:id="PortTxt" prefWidth="160.0" promptText="0 - 65535" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="290.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="115.0" styleClass="blueColorLabel" stylesheets="@../resources/ServerAppScreen.css" text="DB Name">
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <TextField fx:id="DBNameTxt" prefWidth="160.0" promptText="dbc:mysql://127.0.0.1:3306/cems?serverTimezone=IST&amp;allowLoadLocalInfile=true" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="16.0" prefWidth="114.0" styleClass="blueColorLabel" stylesheets="@../resources/ServerAppScreen.css" text="DB user name">
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <TextField fx:id="DBUserNameTxt" prefWidth="160.0" promptText="aka root" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="19.0" prefWidth="106.0" styleClass="blueColorLabel" stylesheets="@../resources/ServerAppScreen.css" text="DB password">
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin></Label>
+                  <PasswordField fx:id="PasswordTxt" prefHeight="26.0" prefWidth="161.0" promptText="Enter Password" />
+               </children>
+            </HBox>
+            <HBox prefHeight="95.0" prefWidth="294.0">
+               <children>
+                  <VBox prefHeight="95.0" prefWidth="179.0">
+                     <children>
+                        <Label fx:id="ipErrorLabel" text="IP Address should be 0-254" textFill="#ec0303" visible="false" />
+                        <Label fx:id="PortErrorLabel" text="Port contains only digits" textFill="#d70707" visible="false" />
+                        <Label fx:id="dbNameErrorLabel" text="db name error" textFill="#e70606" visible="false" />
+                        <Label fx:id="usernameErrorLabel" text="username not found" textFill="#f40404" visible="false" />
+                        <Label fx:id="passwordErrorLabel" text="wrong password" textFill="RED" visible="false" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="startserverBtn" layoutX="315.0" layoutY="355.0" mnemonicParsing="false" onAction="#serveStartAction" text="Start Server" />
+      <VBox fx:id="TableViewContainer" layoutX="315.0" layoutY="104.0" prefHeight="200.0" prefWidth="325.0">
+         <children>
+            <TableView fx:id="connStatusTable" opacity="0.81" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="IPCol" prefWidth="75.0" resizable="false" text="Ip" />
+                <TableColumn fx:id="HostCol" prefWidth="75.0" resizable="false" text="Host" />
+                  <TableColumn fx:id="StatusCol" prefWidth="90.0" resizable="false" text="Status" />
+                  <TableColumn fx:id="StTimeCol" prefWidth="84.0" resizable="false" text="Start Time" />
+              </columns>
+            </TableView>
+         </children></VBox>
+      <Label fx:id="serverMessagesUi" alignment="CENTER" layoutX="371.0" layoutY="313.0" prefHeight="26.0" prefWidth="214.0" textAlignment="CENTER">
+         <font>
+            <Font name="David" size="18.0" />
+         </font>
+      </Label>
+      <Circle fx:id="serverStartedCircle" fill="RED" layoutX="617.0" layoutY="328.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+      <ImageView fx:id="closeAppBtn" fitHeight="35.0" fitWidth="48.0" layoutX="585.0" layoutY="29.0" onMousePressed="#closeApp" pickOnBounds="true" preserveRatio="true" styleClass="exit">
+         <image>
+            <Image url="@../images/X.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="stopServerBtn" layoutX="460.0" layoutY="355.0" mnemonicParsing="false" onMouseClicked="#stopServer" text="Stop Server" />
+   </children>
+</AnchorPane>

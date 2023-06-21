@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1300.0" styleClass="cemsBackground" stylesheets="@../resources/cemsStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teacherUi.GradeExamScreenController">
+   <center>
+      <AnchorPane prefHeight="795.0" prefWidth="1300.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="194.0" fitWidth="288.0" layoutX="739.0" layoutY="613.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cems-logo.png" />
+               </image>
+            </ImageView>
+            <AnchorPane layoutX="38.0" layoutY="25.0" />
+            <AnchorPane layoutX="93.0" layoutY="145.0" />
+            <Label layoutX="292.0" layoutY="12.0" textFill="#1693f7">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="29.0" layoutX="1256.0" layoutY="117.0" onMouseClicked="#refresh" pickOnBounds="true" preserveRatio="true" styleClass="exit">
+               <image>
+                  <Image url="@../images/refresh-button.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="testsTakenTable" layoutX="840.0" layoutY="148.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="529.0" prefWidth="442.0">
+               <columns>
+                  <TableColumn fx:id="studentIdCol" prefWidth="95.0" text="Student id" />
+                  <TableColumn fx:id="testNameCol" prefWidth="194.0" text="Test Name" />
+                  <TableColumn fx:id="subjectCol" prefWidth="151.0" text="Subject" />
+               </columns>
+            </TableView>
+            <TextField fx:id="filterTextField" layoutX="977.0" layoutY="118.0" onKeyTyped="#filterTable" prefHeight="25.0" prefWidth="271.0" />
+            <Label layoutX="849.0" layoutY="122.0" prefHeight="17.0" prefWidth="135.0" styleClass="blueColorLabel" text="Search by test name:" />
+            <ScrollPane fx:id="gradeScrollScreen" fitToHeight="true" fitToWidth="true" layoutX="18.0" layoutY="148.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="530.0" prefWidth="806.0" styleClass="blue-border-pane" />
+            <Button layoutX="22.0" layoutY="773.0" mnemonicParsing="false" onAction="#approveGrade" prefHeight="25.0" prefWidth="98.0" styleClass="approve-Button" text="Approve Grade" />
+            <Label fx:id="msgLbl" layoutX="183.0" layoutY="772.0" prefHeight="31.0" prefWidth="516.0" textFill="RED" />
+            <ComboBox fx:id="ConductedExamComboBox" layoutX="990.0" layoutY="83.0" prefHeight="26.0" prefWidth="291.0" styleClass="combo-box" stylesheets="@../resources/startTestScreenStyle.css" />
+            <Button fx:id="aprrove_all_grades_Btn" layoutX="841.0" layoutY="81.0" mnemonicParsing="false" onMouseClicked="#AprroveAllGradeAction" prefHeight="29.0" prefWidth="139.0" styleClass="approve-Button" text="Approve All Grades" />
+            <AnchorPane layoutY="-2.0" prefHeight="59.0" prefWidth="1300.0" styleClass="backGround">
+               <children>
+                  <Label layoutX="222.0" layoutY="13.0" prefHeight="31.0" prefWidth="90.0" styleClass="title" text="Subject: ">
+                     <font>
+                        <Font name="David Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="subjectLabel" layoutX="326.0" layoutY="13.0" prefHeight="31.0" prefWidth="200.0" styleClass="blueColorLabel" textFill="#1693f7">
+                     <font>
+                        <Font name="David Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="594.0" layoutY="14.0" styleClass="title" text="Grade Tests" textFill="#1693f7">
+                     <font>
+                        <Font name="David Bold" size="38.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="left_arrow" layoutX="23.0" layoutY="16.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0">
+                     <styleClass>
+                        <String fx:value="backArrow-button" />
+                        <String fx:value="exit" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="1270.0" layoutY="1.0" maxWidth="36.0" minHeight="28.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="36.0" fx:id="xButton">
+                     <styleClass>
+                        <String fx:value="exit-button" />
+                        <String fx:value="exit" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="194.0" fitWidth="288.0" layoutX="738.0" layoutY="613.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cems-logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="326.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

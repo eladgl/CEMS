@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="749.0" prefWidth="1217.0" styleClass="cemsBackground" stylesheets="@../resources/cemsStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="headDepartmentUI.StatisticsReportControllerHD">
+   <top>
+      <AnchorPane prefHeight="69.0" prefWidth="1077.0" style="-fx-border-color: black;" styleClass="backGround" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="501.0" layoutY="9.0" style="-fx-font-size: 30;" styleClass="title" text="Statistics Report" textFill="#1693f7">
+               <font>
+                  <Font name="David Bold" size="38.0" />
+               </font>
+            </Label>
+            <Button fx:id="left_arrow_image" layoutX="21.0" layoutY="16.0" mnemonicParsing="false">
+               <styleClass>
+                  <String fx:value="backArrow-button" />
+                  <String fx:value="exit" />
+               </styleClass>
+            </Button>
+            <Button layoutX="1186.0" layoutY="-1.0" mnemonicParsing="false" fx:id="xButton">
+               <styleClass>
+                  <String fx:value="exit-button" />
+                  <String fx:value="exit" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="489.0" prefWidth="791.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="hboxData" alignment="CENTER" layoutX="561.0" layoutY="566.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="84.0" prefWidth="191.0">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="151.0" text="Number Of Students" textFill="BLUE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="Average Score" textFill="BLUE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="21.0" prefWidth="63.0" text="Median" textFill="BLUE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="21.0" prefWidth="98.0" text="Failure Rate" textFill="BLUE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_RIGHT">
+                     <children>
+                        <Label fx:id="studentNumLabel" styleClass="blackColorLabel">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="avgLabel" styleClass="blackColorLabel">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="meidanLabel" styleClass="blackColorLabel">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="failedLabel" styleClass="blackColorLabel">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Label fx:id="stat" layoutX="317.0" layoutY="84.0" prefHeight="18.0" prefWidth="181.0" text="Label" visible="false" />
+            <Label layoutX="842.0" layoutY="43.0" styleClass="blueColorLabel" text="Compare exams by:">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <BarChart fx:id="grade_chart" layoutX="14.0" layoutY="14.0" prefHeight="540.0" prefWidth="801.0" stylesheets="@../resources/BarChartStyle.css">
+              <xAxis>
+                <CategoryAxis label="Grade Variance" side="BOTTOM" styleClass="blueColorLabel" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis label="Students Count" side="LEFT" styleClass="blueColorLabel" />
+              </yAxis>
+            </BarChart>
+            <TableView fx:id="exam_table" layoutX="828.0" layoutY="284.0" prefHeight="366.0" prefWidth="343.0" style="-fx-border-color: lightblue;">
+              <columns>
+                <TableColumn fx:id="exam_name_col" prefWidth="226.0" text="Test Name" />
+                  <TableColumn fx:id="select_exam_col" prefWidth="115.99995930989581" text="Select" />
+              </columns>
+            </TableView>
+            <Label fx:id="noteLabel" layoutX="55.0" layoutY="574.0" prefHeight="28.0" prefWidth="273.0" text="Click on test Name for additional data" textFill="BLUE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="CompareTypeBox" layoutX="850.0" layoutY="78.0" prefWidth="150.0" styleClass="cemsComboBox" />
+            <ComboBox fx:id="dataSelectBox" layoutX="850.0" layoutY="144.0" prefWidth="150.0" styleClass="cemsComboBox" />
+            <Button layoutX="865.0" layoutY="206.0" minWidth="91.0" mnemonicParsing="false" onAction="#updateChart" prefHeight="37.0" prefWidth="91.0" text="confirm">
+               <styleClass>
+                  <String fx:value="blue-Button" />
+                  <String fx:value="exit" />
+               </styleClass>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

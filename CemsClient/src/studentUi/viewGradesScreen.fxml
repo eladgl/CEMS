@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="700.0" styleClass="cemsBackground" stylesheets="@../resources/cemsStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentUi.viewGradesScreenController">
+   <top>
+      <AnchorPane prefHeight="60.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="1.0" prefHeight="64.0" prefWidth="700.0" style="-fx-border-color: black;" styleClass="backGround">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="278.0" layoutY="8.0" styleClass="title" text="View Grades" textFill="#1693f7">
+                     <font>
+                        <Font name="David Bold" size="38.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="back_arrow_image" layoutX="14.0" layoutY="10.0" mnemonicParsing="false">
+                     <styleClass>
+                        <String fx:value="backArrow-button" />
+                        <String fx:value="exit" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="669.0" layoutY="3.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="31.0" fx:id="xButton">
+                     <styleClass>
+                        <String fx:value="exit" />
+                        <String fx:value="exit-button" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="355.0" prefWidth="698.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="downloadBtn" layoutX="428.0" layoutY="71.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="87.0" text="Download">
+               <styleClass>
+                  <String fx:value="save-Button" />
+                  <String fx:value="genericButtonPressed" />
+               </styleClass></Button>
+            <Button fx:id="clearBtn" layoutX="428.0" layoutY="122.0" mnemonicParsing="false" prefWidth="73.0" text="Clear ">
+               <styleClass>
+                  <String fx:value="save-Button" />
+                  <String fx:value="genericButtonPressed" />
+               </styleClass></Button>
+            <TableView fx:id="gradesTable" layoutX="23.0" layoutY="23.0" prefHeight="231.0" prefWidth="393.0" style="-fx-border-color: lightblue;">
+               <columns>
+                  <TableColumn fx:id="nameCol" editable="false" prefWidth="118.0" resizable="false" text="Username" />
+                  <TableColumn fx:id="subjectCol" editable="false" prefWidth="135.99996948242188" resizable="false" text="Subject" />
+                  <TableColumn fx:id="gradeCol" editable="false" prefWidth="135.33331298828125" resizable="false" text="Grade" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+              </TableView>
+            <Label fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="242.0" prefHeight="48.0" prefWidth="356.0" text="&#10;" textFill="RED">
+               <font>
+                  <Font name="David" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="164.0" fitWidth="203.0" layoutX="517.0" layoutY="160.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cems-logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

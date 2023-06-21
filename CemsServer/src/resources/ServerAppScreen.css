@@ -1,0 +1,150 @@
+.button {
+  -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 5,4,3,5;
+    -fx-background-insets: 0,1,2,0;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-font-family: "Arial";
+    -fx-text-fill: linear-gradient(white, #d0d0d0);
+    -fx-font-size: 14px;
+    -fx-padding: 10 20 10 20;
+}
+
+.button:hover {
+  -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(190, 200, 205, 0.5), rgba(255, 255, 255, 0.5));
+  -fx-cursor: hand;
+  -fx-background-radius: 5,4,3,5;
+  -fx-background-insets: 0,1,2,0;
+  -fx-effect: dropshadow( three-pass-box , rgba(1,1,1,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:disabled {
+	-fx-background-color: 
+        #484848,
+        linear-gradient(#6e6e6e 0%, #4e4e4e 20%, #3c3c3c 100%),
+        linear-gradient(#2c2c2c, #262626),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.5), rgba(255,255,255,0.7));
+        
+    -fx-opacity: 1.0;
+    -fx-effect: dropshadow( three-pass-box , rgba(50,50,50,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+
+.button:pressed {
+  -fx-background-color: 
+        blue;
+
+  -fx-cursor: hand;
+}
+
+
+/* 
+.button:hover:pressed {
+  -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+  
+  -fx-translate-y: 2px;
+  -fx-cursor: hand;
+  -fx-font-size: 11px;
+  -fx-padding: 8 20 8 20;
+  -fx-effect: dropshadow( three-pass-box , rgba(1,1,1,0.6) , 5, 0.0 , 0 , 1 );
+}
+*/
+
+.text-field {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em;
+    -fx-font-size: 1.16667em;
+    -fx-font-weight: 400;
+    -fx-text-fill: #20262b;
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: #b3b3b3 #b3b3b3 #b3b3b3 #b3b3b3;
+}
+
+.text-field:hover {
+    -fx-border-color: #B9C1C6 #B9C1C6 #d9d9d9 #B9C1C6;
+    -fx-effect: dropshadow(three-pass-box, white, 4, 0, 0, 0);
+}
+
+.text-field:pressed {
+    -fx-border-color: transparent transparent #0077c0 transparent;
+    -fx-effect: dropshadow(three-pass-box, #0077c0, 6, 0, 0, 0);
+}
+
+.table-column:hover {
+    -fx-background-color: #E0E0E0; /* change the background color to gray */
+    -fx-cursor: hand; /* change the cursor to a hand icon */
+}
+
+.custom-text-field {
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em;
+    -fx-font-size: 1.16667em;
+    -fx-font-weight: 400;
+    -fx-text-fill: #20262b;
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: lightblue lightblue lightblue lightblue;
+}
+
+.custom-text-field:hover {
+    -fx-border-color: #B9C1C6 #B9C1C6 #d9d9d9 #B9C1C6;
+    -fx-effect: dropshadow(three-pass-box, white, 4, 0, 0, 0);
+}
+
+.custom-text-field:pressed {
+    -fx-border-color: transparent transparent #0077c0 transparent;
+    -fx-effect: dropshadow(three-pass-box, #0077c0, 6, 0, 0, 0);
+}
+
+.table-column:hover {
+    -fx-background-color: #E0E0E0;
+    -fx-cursor: hand;
+}
+
+.title 
+{
+    -fx-font-size: 1.8em;  
+    -fx-text-fill: #006400;  
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4, 0, 0, 2);
+}
+
+.genericButtonPressed:pressed{
+  -fx-scale-x: 0.8; /* Scale down horizontally when pressed */
+  -fx-scale-y: 0.8; /* Scale down vertically when pressed */
+}
+
+.exit:pressed{
+  -fx-scale-x: 0.8; /* Scale down horizontally when pressed */
+  -fx-scale-y: 0.8; /* Scale down vertically when pressed */
+}
+
+.cemsBackground 
+{
+  -fx-border-color: black;
+  -fx-border-width: 1;
+  -fx-background-image: url("../images/cemsBackground.jpg");
+  -fx-background-repeat: no-repeat;
+  -fx-background-size: cover;
+  -fx-background-clip: content-box;
+}
+
+.blueColorLabel 
+{
+	
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4, 0, 0, 2);
+  -fx-text-fill: #004eff;
+  -fx-font-weight: bold;
+}

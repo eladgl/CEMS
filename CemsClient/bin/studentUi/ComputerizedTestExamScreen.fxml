@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="683.0" style="-fx-effect: dropshadow( one-pass-box , black , 8 , 0.0 , 2 , 0 ); -fx-control-inner-background: transparent;" styleClass="cemsBackground" stylesheets="@../resources/cemsStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="studentUi.ComputerizedTestScreenController">
+	<top>
+		<AnchorPane prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+			<children>
+				<AnchorPane prefHeight="74.0" prefWidth="683.0" style="-fx-border-color: lightblue;" styleClass="backGround">
+					<children>
+						<Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="185.0" layoutY="14.0" prefHeight="33.0" prefWidth="313.0" styleClass="title" text="Computerized Test" textFill="#1693f7">
+							<font>
+								<Font name="David Bold" size="38.0" />
+							</font>
+						</Label>
+                  <Button fx:id="back_arrow_image" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#BackArrowAction" prefHeight="33.0" prefWidth="45.0">
+                     <styleClass>
+                        <String fx:value="backArrow-button" />
+                        <String fx:value="exit" />
+                     </styleClass>
+                  </Button>
+					</children>
+				</AnchorPane>
+			</children>
+		</AnchorPane>
+	</top>
+	<center>
+		<AnchorPane prefHeight="605.0" prefWidth="681.0" stylesheets="@../resources/cemsStyle.css" BorderPane.alignment="CENTER">
+			<children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="535.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cems-logo.png" />
+               </image>
+            </ImageView>
+				<Text fx:id="questionNumber" fill="#1a00ff" layoutX="159.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blueColorLabel" text="2">
+					<font>
+						<Font name="David Bold" size="26.0" />
+					</font>
+				</Text>
+				<Text fill="#1a00ff" layoutX="193.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blueColorLabel" text="/" wrappingWidth="9.0">
+					<font>
+						<Font name="David Bold" size="26.0" />
+					</font>
+				</Text>
+				<Text fx:id="totalNumberOfQuestions" fill="#1a00ff" layoutX="232.0" layoutY="560.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="blueColorLabel" text="10">
+					<font>
+						<Font name="David Bold" size="26.0" />
+					</font>
+				</Text>
+				<Button layoutX="16.0" layoutY="538.0" minWidth="67.0" mnemonicParsing="false" onAction="#backward" prefHeight="29.0" prefWidth="67.0" style="-fx-pref-width: 10;" text="Back">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+               <styleClass>
+                  <String fx:value="save-Button" />
+                  <String fx:value="genericButtonPressed" />
+               </styleClass>
+				</Button>
+				<Button layoutX="276.0" layoutY="539.0" minWidth="61.0" mnemonicParsing="false" onAction="#next" prefHeight="29.0" prefWidth="61.0" text="Next">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+               <styleClass>
+                  <String fx:value="save-Button" />
+                  <String fx:value="genericButtonPressed" />
+               </styleClass>
+				</Button>
+				<Label layoutX="487.0" layoutY="14.0" prefHeight="20.0" prefWidth="114.0" text="Time Remaining:">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Label>
+				<AnchorPane layoutX="23.0" layoutY="50.0" />
+				<VBox layoutX="21.0" layoutY="219.0" prefHeight="236.0" prefWidth="547.0" spacing="15.0">
+					<children>
+						<HBox>
+							<children>
+								<RadioButton fx:id="r1" mnemonicParsing="false" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+									<padding>
+										<Insets right="25.0" top="12.0" />
+									</padding>
+									<font>
+										<Font name="Open Sans" size="14.0" />
+									</font>
+									<toggleGroup>
+										<ToggleGroup fx:id="answers" />
+									</toggleGroup>
+								</RadioButton>
+								<TextArea fx:id="answer1" editable="false" prefHeight="47.0" prefWidth="533.0" styleClass="custom-text-field" wrapText="true">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</TextArea>
+							</children>
+						</HBox>
+						<HBox>
+							<children>
+								<RadioButton fx:id="r2" mnemonicParsing="false" textAlignment="CENTER" toggleGroup="$answers" HBox.hgrow="ALWAYS">
+									<padding>
+										<Insets right="25.0" top="12.0" />
+									</padding>
+									<font>
+										<Font name="Open Sans" size="14.0" />
+									</font>
+								</RadioButton>
+								<TextArea fx:id="answer2" editable="false" prefHeight="48.0" prefWidth="535.0" styleClass="custom-text-field" wrapText="true">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</TextArea>
+							</children>
+						</HBox>
+						<HBox>
+							<children>
+								<RadioButton fx:id="r3" mnemonicParsing="false" textAlignment="CENTER" toggleGroup="$answers" HBox.hgrow="ALWAYS">
+									<padding>
+										<Insets right="25.0" top="12.0" />
+									</padding>
+									<font>
+										<Font name="Open Sans" size="14.0" />
+									</font>
+								</RadioButton>
+								<TextArea fx:id="answer3" editable="false" prefHeight="48.0" prefWidth="532.0" styleClass="custom-text-field" wrapText="true">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</TextArea>
+							</children>
+						</HBox>
+						<HBox>
+							<children>
+								<RadioButton fx:id="r4" mnemonicParsing="false" textAlignment="CENTER" toggleGroup="$answers" HBox.hgrow="ALWAYS">
+									<padding>
+										<Insets right="25.0" top="12.0" />
+									</padding>
+									<font>
+										<Font name="Open Sans" size="14.0" />
+									</font>
+								</RadioButton>
+								<TextArea fx:id="answer4" editable="false" prefHeight="48.0" prefWidth="512.0" styleClass="custom-text-field" wrapText="true">
+									<font>
+										<Font size="14.0" />
+									</font>
+								</TextArea>
+							</children>
+						</HBox>
+					</children>
+				</VBox>
+				<Button layoutX="482.0" layoutY="532.0" maxWidth="167.0" mnemonicParsing="false" onAction="#submitTest" prefHeight="35.0" prefWidth="167.0" text="Submit Test" textFill="#1a00ff">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+               <styleClass>
+                  <String fx:value="approve-Button" />
+                  <String fx:value="genericButtonPressed" />
+               </styleClass>
+				</Button>
+				<Label layoutX="14.0" layoutY="121.0" prefHeight="32.0" prefWidth="119.0" styleClass="blueColorLabel" text="Question : " textFill="#1a00ff">
+					<font>
+						<Font name="AdobeSongStd-Light" size="22.0" />
+					</font>
+				</Label>
+				<Label fx:id="timer" layoutX="611.0" layoutY="7.0" prefHeight="33.0" prefWidth="60.0" text="Label">
+					<font>
+						<Font name="System Bold" size="14.0" />
+					</font>
+				</Label>
+				<Label fx:id="subject" alignment="CENTER" layoutX="64.0" layoutY="34.0" prefHeight="49.0" prefWidth="556.0" styleClass="blueColorLabel" text="Test name" textFill="#1a00ff">
+					<font>
+						<Font name="David Bold" size="28.0" />
+					</font>
+				</Label>
+				<TextArea fx:id="question" editable="false" layoutX="124.0" layoutY="124.0" prefHeight="70.0" prefWidth="445.0" styleClass="custom-text-field" wrapText="true">
+					<font>
+						<Font size="14.0" />
+					</font>
+				</TextArea>
+				<Label fx:id="points" alignment="CENTER" layoutX="16.0" layoutY="148.0" prefHeight="22.0" prefWidth="88.0" styleClass="blueColorLabel" text="(25 points)" textFill="#1a00ff">
+					<font>
+						<Font name="Bodoni MT Condensed" size="16.0" />
+					</font>
+				</Label>
+				<Button layoutX="482.0" layoutY="479.0" maxWidth="167.0" mnemonicParsing="false" onAction="#descriptionBTN" prefHeight="35.0" prefWidth="167.0" text="Show Test Description" textFill="#1a00ff">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+               <styleClass>
+                  <String fx:value="save-Button" />
+                  <String fx:value="genericButtonPressed" />
+               </styleClass>
+				</Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="535.0" layoutY="305.0" opacity="0.35" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cems-logo.png" />
+               </image>
+            </ImageView>
+			</children>
+		</AnchorPane>
+	</center>
+</BorderPane>

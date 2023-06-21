@@ -1,0 +1,69 @@
+/* styles.css */
+
+/* TextFields */
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: gray;
+    -fx-border-width: 0 0 1 0; /* Only bottom border */
+}
+
+.text-field:focused {
+    -fx-border-color: green;
+    -fx-border-width: 2 1 2 1;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: linear-gradient(to bottom, blue, lightblue);
+    -fx-text-fill: white;
+    -fx-border-color: gray;
+    -fx-border-width: 1;
+}
+
+.button:pressed {
+    -fx-background-color: linear-gradient(to bottom, lightblue, blue);
+    -fx-border-color: darkgray;
+}
+
+
+.button:focused {
+    -fx-border-color: green;
+    -fx-border-width: 1;
+}
+
+.button:hover {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+}
+
+/* ComboBoxes */
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: gray;
+    -fx-border-width: 0 0 1 0;
+}
+
+.combo-box:focused {
+    -fx-border-color: green;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* RadioButtons */
+
+.radio-button:selected .radio,
+.radio-button:selected .radio > .radio-mark {
+    -fx-background-color: green;
+}
+
+.radio-button{
+	-fx-font-color: black;
+	-fx-font-weight: bold;
+}
+
+#errorLbl {
+    -fx-text-fill: red;
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+}

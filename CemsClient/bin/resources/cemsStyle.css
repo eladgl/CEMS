@@ -1,0 +1,547 @@
+.cemsBackground 
+{
+  -fx-border-color: black;
+  -fx-border-width: 1;
+  -fx-background-image: url("../images/cemsBackground.jpg");
+  -fx-background-repeat: no-repeat;
+  -fx-background-size: cover;
+  -fx-background-clip: content-box;
+}
+
+.backGround {
+    -fx-background-color: rgb(0, 150, 255, 0.3);
+    -fx-border-color: black;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-transparent: 0 0 1 0;
+    -fx-pref-height: 55px; /* Set the preferred width as desired */
+    
+}
+
+.button-87 {
+  -fx-width: 100px; /* Adjust the width as needed */
+  -fx-height: 100px; /* Adjust the height as needed */
+  -fx-padding: 0;
+  -fx-background-image: url("../images/button_Background.jpg");
+  -fx-background-size: 100% auto;
+  -fx-background-position: center;
+  -fx-background-repeat: no-repeat;
+  -fx-cursor: pointer;
+  -fx-border: none;
+}
+
+.button-87:hover {
+  -fx-width: 105px; /* Adjust the width as needed */
+  -fx-height: 105px; /* Adjust the height as needed */
+  -fx-margin-top: 5px; /* Adjust the margin as needed */
+  -fx-background-image: url("../images/button_Background_hover.jpg");
+  -fx-border-color: lightgreen;
+  -fx-transition: width 0.3s, height 0.3s, margin-top 0.3s;
+}
+
+
+.exit:pressed{
+  -fx-scale-x: 0.8; /* Scale down horizontally when pressed */
+  -fx-scale-y: 0.8; /* Scale down vertically when pressed */
+}
+
+
+.cemsButton {
+  -fx-background-color: transparent;
+  -fx-text-fill: #000000; /* Black text color */
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-padding: 10px 20px;
+  -fx-transition: -fx-text-fill 0.3s;
+}
+
+.cemsButton:hover {
+  -fx-text-fill: #008000; /* Darker green text color on hover */
+}
+
+.cemsButton:pressed {
+  -fx-text-fill: #008000; /* Darker green text color when pressed */
+  -fx-font-weight: bold;
+  -fx-scale-x: 0.8; /* Scale down horizontally when pressed */
+  -fx-scale-y: 0.8; /* Scale down vertically when pressed */
+}
+
+.cemsComboBox {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-text-fill: green;
+    -fx-border-width: 0 0 2 0;
+}
+
+.cemsComboBox:hover {
+    -fx-border-color: blue;
+     -fx-border-width: 0 0 2 0;
+}
+
+.cemsComboBox:focused {
+    -fx-border-color: green;
+     -fx-border-width: 0 0 2 0;
+}
+
+.cemsComboBox:focused:hover {
+    -fx-border-color: blue;
+     -fx-border-width: 0 0 2 0;
+}
+
+
+.title 
+{
+    -fx-font-size: 1.8em;  
+    -fx-text-fill: #006400;  
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4, 0, 0, 2);
+}
+
+.blackColorLabel 
+{
+	
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4, 0, 0, 2);
+  -fx-text-fill: #000000;
+  -fx-font-weight: bold;
+}
+
+
+.blueColorLabel 
+{
+	
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 4, 0, 0, 2);
+  -fx-text-fill: #004eff;
+  -fx-font-weight: bold;
+}
+
+.glass-grey 
+{
+    -fx-background-color: 
+        #c3c4c4,
+        linear-gradient(#d6d6d6 50%, white 100%),
+        radial-gradient(center 50% -40%, radius 200%, #e6e6e6 45%, rgba(230,230,230,0) 50%);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0,1,1;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+}
+
+.green-border 
+{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+    -fx-border-color: lightgreen;
+    -fx-border-width: 2px;
+    -fx-border-radius: 50%;
+}
+
+.exit-size
+{
+	-fx-fit-width: 34px; /* Set the desired width */
+    -fx-fit-height: 34px; /* Set the desired height */
+}
+
+.save-Button 
+{
+  -fx-display: flex;
+  -fx-flex-direction: column;
+  -fx-align-items: center;
+  -fx-padding: 6px 14px;
+  -fx-font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  -fx-border-radius: 6px;
+  -fx-border-width: 0;
+  -fx-background-color: linear-gradient(#4B91F7, #367AF6);
+  -fx-background-radius: 6px;
+  -fx-background-insets: 0;
+  -fx-text-fill: white;
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+  -fx-user-select: none;
+  -fx-touch-action: manipulation;
+   -fx-min-width: 120;
+  -fx-max-width: 160;
+}
+
+.save-Button:hover {
+  -fx-background-color: linear-gradient(#4B91F7, #367AF6, #3366E6);
+}
+
+.end-Button {
+  -fx-display: flex;
+  -fx-flex-direction: column;
+  -fx-align-items: center;
+  -fx-padding: 6px 14px;
+  -fx-font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  -fx-border-radius: 6px;
+  -fx-border-width: 0;
+  -fx-background-color: linear-gradient(#FF5F5F, #FF3737); /* Updated color values */
+  -fx-background-radius: 6px;
+  -fx-background-insets: 0;
+  -fx-text-fill: white;
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+  -fx-user-select: none;
+  -fx-touch-action: manipulation;
+  -fx-min-width: 100;
+  -fx-max-width: 160;
+}
+
+.end-Button:hover {
+  -fx-background-color: linear-gradient(#FF5F5F, #FF3737, #E63030); /* Updated hover color values */
+}
+
+
+/* Styling for the table */
+.table-view {
+   -fx-background-color: #f4f4f4;
+   -fx-background-radius: 5px;
+  -fx-padding: 2px;
+  -fx-border-color: #7be6e6; /* Green border color */
+  -fx-border-width: 2px;
+  -fx-border-radius: 5px; /* Border radius for rounded corners */
+}
+
+/* Styling for the column headers */
+.table-view .column-header-background {
+  -fx-background-color: #333333;
+}
+
+.table-view .column-header .label {
+  -fx-text-fill: black;
+  -fx-font-weight: bold;
+}
+
+/* Styling for the table rows */
+.table-row-cell {
+  -fx-background-color: #ffffff;
+}
+
+.table-row-cell:odd {
+  -fx-background-color: #f8f8f8;
+}
+
+/* Styling for selected rows */
+.table-row-cell:selected {
+  -fx-background-color: rgba(21, 121, 46, 0.5); /* Transparent green color */
+  -fx-text-fill: white;
+}
+
+.myText-field {
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 1);
+  -fx-border-width: 2px;
+  -fx-border-radius: 5px;
+  -fx-background-radius: 5px;
+  -fx-background-color: white;
+ -fx-effect: dropshadow(gaussian, white, 0, 0, 0, 2);
+}
+
+.scroll-pane {
+  -fx-background-color: white;
+  -fx-background-radius: 5px;
+  -fx-border-color: #CCCCCC;
+  -fx-border-radius: 5px;
+  -fx-border-width: 1px;
+}
+
+.scroll-pane .viewport {
+  -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar {
+  -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar:horizontal {
+  -fx-pref-height: 8px;
+}
+
+.scroll-pane .scroll-bar:vertical {
+  -fx-pref-width: 8px;
+}
+
+.scroll-pane .scroll-bar .thumb {
+  -fx-background-color: #CCCCCC;
+  -fx-background-radius: 5px;
+}
+
+.scroll-pane .scroll-bar .thumb:hover {
+  -fx-background-color: #999999;
+}
+
+.scroll-pane .scroll-bar .increment-button,
+.scroll-pane .scroll-bar .decrement-button {
+  -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar .increment-arrow,
+.scroll-pane .scroll-bar .decrement-arrow {
+  -fx-background-color: transparent;
+}
+
+.scroll-pane .scroll-bar .increment-arrow:hover,
+.scroll-pane .scroll-bar .decrement-arrow:hover {
+  -fx-background-color: #999999;
+}
+
+/* for build exam */
+
+.question-vbox {
+    -fx-background-color: #f5f5f5; /* Background color */
+    -fx-padding: 10px; /* Padding around the VBox */
+    -fx-border-color: #ccc; /* Border color */
+    -fx-border-width: 1px; /* Border width */
+    -fx-border-radius: 5px; /* Border radius */
+}
+
+.question-vbox .question-description-label {
+    -fx-font-weight: bold; /* Bold font weight for the question description label */
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.question-vbox .answer-option-label {
+    -fx-padding: 5px 0; /* Padding for each answer option label */
+    -fx-font-size: 12px;
+    -fx-text-fill: #FF0000; /* Red color */
+}
+
+.question-vbox .correct-option-label {
+    -fx-padding: 5px 0; /* Padding for each answer option label */
+    -fx-font-size: 12px;
+    -fx-text-fill: #FF0000; /* Red color */
+}
+
+.question-vbox .correct-option-label 
+{
+    -fx-padding: 5px 0; /* Padding for each answer option label */
+    -fx-font-size: 12px;
+    -fx-text-fill: #00FF00; /* Green color */
+    -fx-font-weight: bold;
+}
+
+.registrationLabel {
+    -fx-font-size: 15px;
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.registrationLabel:hover {
+    -fx-text-fill: purple;
+}
+
+.question-vbox .question-score-textfield 
+{
+    -fx-pref-width: 100px; /* Preferred width for the question score TextField */
+}
+
+.highlighted-vbox {
+    -fx-background-color: yellow;
+    -fx-border-width: 2px;
+}
+
+.question-vbox .image-view 
+{
+    -fx-alignment: center-right;
+}
+
+/*for build exam */
+
+.custom-text-field 
+{
+    -fx-background-color: white;
+    -fx-background-insets: 0;
+    -fx-font-size: 1.16667em;
+    -fx-font-weight: 400;
+    -fx-text-fill: #20262b;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.custom-text-field:hover 
+{
+    -fx-border-color: rgba(52, 76, 255, 0.5); /* Set the border color to a transparent light blue */
+    -fx-effect: dropshadow(three-pass-box, white, 4, 0, 0, 0);
+}
+
+.custom-text-field:pressed 
+{
+    -fx-border-color: transparent transparent #0077c0 transparent;
+    -fx-effect: dropshadow(three-pass-box, #0077c0, 6, 0, 0, 0);
+}
+
+.backArrowButton:pressed{
+	-fx-scale-x: 0.8; /* Scale down horizontally when pressed */
+  -fx-scale-y: 0.8; /* Scale down vertically when pressed */
+}
+
+.registrationTextField{
+	-fx-border-width:0 1 2 1;
+	-fx-border-color:transparent transparent gray transparent;
+}
+.registrationTextField:focused{
+	-fx-border-color:green;
+}
+
+.errorLabel{
+    -fx-font-size: 16px;
+    -fx-font-family: "David";
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+}
+
+
+.Cemscheckbox:selected .box > .mark {
+    -fx-background-color: green;
+}
+
+.Cemscheckbox:selected .box{
+    -fx-border-color:green;
+}
+
+
+.approve-Button {
+  -fx-display: flex;
+  -fx-flex-direction: column;
+  -fx-align-items: center;
+  -fx-padding: 6px 14px;
+  -fx-font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  -fx-border-radius: 6px;
+  -fx-border-width: 0;
+  -fx-background-color: linear-gradient(#80C862, #61B14E); 
+  -fx-background-radius: 6px;
+  -fx-background-insets: 0;
+  -fx-text-fill: white;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 3, 0.0, 0, 1);
+  -fx-user-select: none;
+  -fx-touch-action: manipulation;
+  -fx-min-width: 120;
+  -fx-max-width: 160;
+}
+
+.approve-Button:hover {
+  -fx-background-color: linear-gradient(#80C862, #61B14E, #55A845); 
+}
+
+
+.None 
+{
+  -fx-text-fill: black;
+  -fx-font-weight: bold;
+   -fx-font-size: 14px;
+}
+
+.Denied 
+{
+  -fx-text-fill: red;
+  -fx-font-weight: bold;
+   -fx-font-size: 14px;
+}
+
+.Approved 
+{
+  -fx-text-fill: green;
+  -fx-font-weight: bold;
+   -fx-font-size: 14px;
+}
+
+.Pending 
+{
+  -fx-text-fill: orange;
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
+}
+
+.ongion_exams {
+  -fx-font-family: 'Heebo', sans-serif;
+  -fx-font-weight: bold;
+  -fx-font-style: normal;
+  -fx-text-transform: capitalize;
+  -fx-text-fill: #00ff00; 
+  -fx-background-color: white;
+  -fx-border-color: #11ff00;
+  -fx-border-width: 2px; /* Set the border width */
+  -fx-border-radius: 10px; /* Set a higher border corner radius for more rounded background */
+  -fx-background-radius: 10px; /* Set the background corner radius */
+}
+
+.orange-label {
+  -fx-font-family: 'Heebo', sans-serif;
+  -fx-font-weight: bold;
+  -fx-font-style: normal;
+  -fx-text-transform: capitalize;
+  -fx-text-fill: #ff9900; /* Use an orange shade for the text */
+  -fx-background-color: white;
+  -fx-border-color: #ff9900; /* Use an orange shade for the border */
+  -fx-border-width: 2px;
+    -fx-border-radius: 10px; /* Set a higher border corner radius for more rounded background */
+  -fx-background-radius: 10px;
+}
+
+.genericButtonPressed:pressed{
+  -fx-scale-x: 0.8; /* Scale down horizontally when pressed */
+  -fx-scale-y: 0.8; /* Scale down vertically when pressed */
+}
+
+.blue-Button 
+{
+  -fx-display: flex;
+  -fx-flex-direction: column;
+  -fx-align-items: center;
+  -fx-padding: 6px 14px;
+  -fx-font-family: -apple-system, BlinkMacSystemFont, 'Roboto', David;
+  -fx-font-size: 16px;
+  -fx-border-radius: 6px;
+  -fx-border-width: 0;
+  -fx-background-color: linear-gradient(#4B91F7, #367AF6);
+  -fx-background-radius: 6px;
+  -fx-background-insets: 0;
+  -fx-text-fill: white;
+  -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 3, 0.0 , 0 , 1 );
+  -fx-user-select: none;
+  -fx-touch-action: manipulation;
+  -fx-min-width: 120;
+  -fx-max-width: 160;
+}
+
+.blue-Button:hover {
+    -fx-background-color: linear-gradient(#4B91F7, #367AF6);
+}
+
+.backArrow-button {
+  -fx-min-width: 30px;
+  -fx-min-height: 30px;
+  -fx-max-width: 30px;
+  -fx-max-height: 30px;
+  -fx-background-color: transparent;
+  -fx-background-image: url("../images/leftButtonImg.png");
+  -fx-background-size: cover;
+  -fx-background-position: center;
+  -fx-background-repeat: no-repeat;
+  -fx-cursor: hand;
+  -fx-border-radius: 50%;
+  -fx-border-color: transparent;
+  -fx-border-width: 0;
+}
+
+.backArrow-button:hover {
+  -fx-background-image: url("../images/leftButtonImg_hover.png");
+}
+
+.exit-button {
+  -fx-min-width: 30px;
+  -fx-min-height: 30px;
+  -fx-max-width: 30px;
+  -fx-max-height: 30px;
+  -fx-background-color: transparent;
+  -fx-background-image: url("../images/X.png");
+  -fx-background-size: cover;
+  -fx-background-position: center;
+  -fx-background-repeat: no-repeat;
+  -fx-cursor: hand;
+  -fx-border-color: transparent;
+  -fx-border-width: 0;
+}
+
+.exit-button:hover {
+  -fx-background-image: url("../images/X_hover.png");
+}
+
+.logoutBtn{
+	-fx-background-color: #FF5494;
+	-fx-font-color:white;
+}

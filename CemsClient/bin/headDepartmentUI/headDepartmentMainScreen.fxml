@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="870.0" styleClass="cemsBackground" stylesheets="@../resources/cemsStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="headDepartmentUI.HeadDepartmentMainScreenController">
+   <top>
+      <AnchorPane prefHeight="63.0" prefWidth="854.0" styleClass="backGround" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="welcomeLabel" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="77.0" layoutY="9.0" prefHeight="45.0" prefWidth="216.0" styleClass="title" textFill="#1693f7">
+               <font>
+                  <Font name="David Bold" size="38.0" />
+               </font>
+            </Label>
+            <HBox layoutX="293.0" layoutY="11.0" prefHeight="34.0" prefWidth="575.0">
+               <children>
+                  <Button fx:id="examsButton" maxHeight="-Infinity" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#viewExamData" prefHeight="42.0" styleClass="cemsButton" text="Exams" textFill="#009431">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/question.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="questionButton" mnemonicParsing="false" onMouseClicked="#viewQuestionData" prefHeight="42.0" prefWidth="134.0" styleClass="cemsButton" text="Questions" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/exam.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="statsButton" mnemonicParsing="false" onMouseClicked="#viewStatistics" prefHeight="42.0" prefWidth="126.0" styleClass="cemsButton" text="Statistics">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/analysis.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                <Button fx:id="timeExButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#approveExtensionTimeScreen" prefHeight="42.0" prefWidth="162.0" styleClass="cemsButton" text="Time Extension">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/hourglass.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="43.0" fx:id="xButton">
+                     <styleClass>
+                        <String fx:value="exit" />
+                        <String fx:value="exit-button" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+            <AnchorPane layoutX="21.0" layoutY="14.0">
+               <children>
+                  <ImageView fx:id="user_profile_image" fitHeight="33.0" fitWidth="40.0" layoutX="2.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/profile-user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="1.0" layoutY="27.0" text="profile">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="283.0" prefWidth="870.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="select_item_error_msg_label" alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="98.0" prefHeight="36.0" prefWidth="287.0" textFill="RED">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="754.0" layoutY="266.0" mnemonicParsing="false" onAction="#logoutUserFromSystem" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: #FF5494;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <ImageView fitHeight="197.0" fitWidth="325.0" layoutX="347.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cems-logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

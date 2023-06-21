@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="980.0" prefWidth="1400.0" styleClass="cemsBackground" stylesheets="@../resources/cemsStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teacherUi.CreateExamToConductController">
+   <center>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="938.0" prefWidth="1398.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="188.0" fitWidth="225.0" layoutX="922.0" layoutY="790.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cems-logo.png" />
+               </image>
+            </ImageView>
+            <ScrollPane layoutX="271.0" layoutY="150.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="722.0" prefWidth="671.0">
+               <content>
+                  <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1307.0" prefWidth="731.0" styleClass="offwhite-pane">
+                     <children>
+                        <Label layoutX="541.0" layoutY="14.0" prefHeight="17.0" prefWidth="42.0" text="Time : ">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Time_label" layoutX="583.0" layoutY="14.0" prefHeight="17.0" prefWidth="58.0" text="00:00:00">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="14.0" layoutY="106.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="128.0" prefWidth="784.0">
+                           <children>
+                              <Label text="Instructions (Lecturer)">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lecturer_description" alignment="TOP_LEFT" maxHeight="96.0" maxWidth="784.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="784.0" styleClass="label-auto-size" stylesheets="@../resources/QuestionBankStyle.css" textFill="#11942d">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="20.0" prefWidth="156.0" text="Instructions (Students)">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="student_description" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="89.0" prefWidth="784.0" styleClass="label-auto-size">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="30.0" />
+                           </padding>
+                           <opaqueInsets>
+                              <Insets bottom="20.0" />
+                           </opaqueInsets>
+                        </VBox>
+                        <VBox fx:id="questions_VBox" layoutX="14.0" layoutY="369.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="1280.0">
+                           <stylesheets>
+                              <URL value="@../resources/QuestionBankStyle.css" />
+                              <URL value="@../resources/VBoxStyle.css" />
+                           </stylesheets></VBox>
+                        <Label fx:id="exam_name" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="31.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="28.0" prefWidth="261.0" styleClass="label-auto-size" stylesheets="@../resources/QuestionBankStyle.css">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <stylesheets>
+                        <URL value="@../resources/QuestionBankStyle.css" />
+                        <URL value="@../resources/VBoxStyle.css" />
+                     </stylesheets>
+                  </Pane>
+               </content>
+            </ScrollPane>
+            <TableView fx:id="exam_table_view" layoutX="950.0" layoutY="149.0" onMouseClicked="#ExamTableViewMouseClick" prefHeight="720.0" prefWidth="442.0">
+              <columns>
+                <TableColumn fx:id="exam_number_col" text="number" />
+                <TableColumn fx:id="exam_name_col" prefWidth="133.0" text="name" />
+                  <TableColumn fx:id="exam_subject_col" prefWidth="113.0" text="subject" />
+                  <TableColumn fx:id="exam_course_col" prefWidth="107.0" text="course" />
+              </columns>
+            </TableView>
+            <Label layoutX="950.0" layoutY="125.0" prefHeight="21.0" prefWidth="56.0" styleClass="blueColorLabel" text="Exams">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="125.0" prefHeight="21.0" prefWidth="126.0" styleClass="blueColorLabel" text="Enroll Students">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="enroll_student_table" layoutX="14.0" layoutY="150.0" prefHeight="723.0" prefWidth="253.0">
+              <columns>
+                  <TableColumn fx:id="check_box_col" minWidth="0.0" prefWidth="26.0" text="X" />
+                <TableColumn fx:id="student_id_col" prefWidth="70.0" text="ID" />
+                  <TableColumn fx:id="first_name_col" prefWidth="69.0" text="First Name" />
+                  <TableColumn fx:id="last_name_col" prefWidth="83.0" text="Last Name" />
+              </columns>
+            </TableView>
+            <Label layoutX="277.0" layoutY="117.0" text="Exam Date Name">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <TextField fx:id="exam_date_name_text" layoutX="389.0" layoutY="110.0" prefHeight="30.0" prefWidth="379.0" styleClass="custom-text-field" />
+            <Label layoutX="783.0" layoutY="117.0" text="Password">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Button layoutX="14.0" layoutY="935.0" mnemonicParsing="false" onMouseClicked="#coductExamAction" prefHeight="25.0" prefWidth="146.0" styleClass="save-Button" text="Conduct Exam" />
+            <Label fx:id="error_mag_label" layoutX="337.0" layoutY="876.0" prefHeight="88.0" prefWidth="515.0" />
+            <TextField fx:id="password_text" layoutX="858.0" layoutY="110.0" prefHeight="22.0" prefWidth="79.0" promptText="4-length" styleClass="custom-text-field" />
+            <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="51.0" prefWidth="1400.0" styleClass="backGround">
+               <children>
+                  <Label layoutX="172.0" layoutY="12.0" prefHeight="31.0" prefWidth="90.0" styleClass="title" text="Subject: ">
+                     <font>
+                        <Font name="David Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="subjectLabel" layoutX="262.0" layoutY="12.0" prefHeight="31.0" prefWidth="200.0" styleClass="blueColorLabel" textFill="#1693f7">
+                     <font>
+                        <Font name="David Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="test_choice_label_instruction" layoutX="490.0" layoutY="12.0" styleClass="title" text=" Course">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="course_label" layoutX="594.0" layoutY="12.0" prefHeight="31.0" prefWidth="221.0" styleClass="blueColorLabel" textFill="#1693f7">
+                     <font>
+                        <Font name="David Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="855.0" layoutY="9.0" prefHeight="37.0" prefWidth="268.0" styleClass="title" text="Create Exam To Conduct" textFill="#1693f7">
+                     <font>
+                        <Font name="David Bold" size="31.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="left_arrow_image" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="45.0">
+                     <styleClass>
+                        <String fx:value="backArrow-button" />
+                        <String fx:value="exit" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="1371.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" fx:id="xButton">
+                     <styleClass>
+                        <String fx:value="exit-button" />
+                        <String fx:value="exit" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="15.0" />
+         </opaqueInsets>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="326.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

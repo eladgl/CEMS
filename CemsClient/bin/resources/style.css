@@ -1,0 +1,19 @@
+.text-area .content {
+   -fx-background-color: transparent;
+}
+.text-area {
+   -fx-background-color: #94dcea;
+}
+
+.registrationSimulation{
+	-fx-background-color: #0598ff;
+}
+
+.registrationSimulation:hover {
+    -fx-text-fill: green;
+}
+
+.registrationSimulation:pressed {
+    -fx-scale-x: 0.99;
+    -fx-scale-y: 0.99;
+}

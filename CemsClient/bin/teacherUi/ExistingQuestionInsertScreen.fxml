@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1400.0" styleClass="cemsBackground" stylesheets="@../resources/cemsStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teacherUi.ExistingQuestionInsertController">
+   <center>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="1400.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="123.0" fitWidth="160.0" layoutX="1274.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cems-logo.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="myBankTavleView" layoutX="14.0" layoutY="100.0" prefHeight="496.0" prefWidth="400.0">
+              <columns>
+                <TableColumn fx:id="number_col_myBank" prefWidth="58.0" text="number" />
+                <TableColumn fx:id="description_cal_myBank" prefWidth="230.0" text="description" />
+                  <TableColumn fx:id="course_col_mayBank" prefWidth="105.0" text="course" />
+              </columns>
+            </TableView>
+            <Label layoutX="14.0" layoutY="73.0" styleClass="blueColorLabel" text="My Bank" textFill="#0a79da">
+               <font>
+                  <Font name="David Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="generalBankTableView" layoutX="945.0" layoutY="100.0" prefHeight="494.0" prefWidth="455.0">
+               <columns>
+                  <TableColumn fx:id="number_col_general" prefWidth="139.0" text="number" />
+                  <TableColumn fx:id="description_col_general" prefWidth="186.0" text="description" />
+                  <TableColumn fx:id="course_col_general" prefWidth="123.0" text="course" />
+               </columns>
+            </TableView>
+            <Label layoutX="945.0" layoutY="73.0" styleClass="blueColorLabel" text="General Bank" textFill="#0a79da">
+               <font>
+                  <Font name="David Bold" size="18.0" />
+               </font>
+            </Label>
+            <ScrollPane layoutX="424.0" layoutY="101.0" prefHeight="493.0" prefWidth="513.0" styleClass="scroll-bar">
+               <content>
+                  <VBox fx:id="VboxQuestion" prefHeight="706.0" prefWidth="634.0" styleClass="vboxQuestion" stylesheets="@../resources/QuestionBankStyle.css">
+                     <children>
+                        <Label fx:id="questionDescription" prefHeight="73.0" prefWidth="958.0" text="description">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="answerA" prefHeight="67.0" prefWidth="1071.0" text="1. choice1">
+                           <font>
+                              <Font name="David" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="answerB" prefHeight="58.0" prefWidth="838.0" text="2. choice2">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" left="10.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="answerC" prefHeight="70.0" prefWidth="1085.0" text="3. choice3">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" left="10.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <Label fx:id="answerD" prefHeight="89.0" prefWidth="1077.0" text="4. choice4">
+                           <font>
+                              <Font name="David" size="16.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" left="10.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <HBox prefHeight="43.0" prefWidth="1195.0">
+                           <opaqueInsets>
+                              <Insets bottom="20.0" top="20.0" />
+                           </opaqueInsets>
+                           <children>
+                              <Label prefHeight="24.0" prefWidth="221.0" text="Relevant Courses : ">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets top="8.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="relevantCoursesLabel" prefHeight="42.0" prefWidth="426.0" textFill="#2b31f8">
+                                 <padding>
+                                    <Insets left="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <ImageView fx:id="left_addBtn" fitHeight="43.0" fitWidth="54.0" layoutX="630.0" layoutY="650.0" onMouseClicked="#left_addBtnAction" onMouseEntered="#enterMouseLeftAdd" onMouseExited="#exitMouseLeftAdd" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/left_add.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="right_addBtn" fitHeight="42.0" fitWidth="54.0" layoutX="673.0" layoutY="651.0" onMouseClicked="#right_addBtnAction" onMouseEntered="#enterMouseRightAdd" onMouseExited="#exitMouseRightAdd" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/right_add.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="424.0" layoutY="73.0" styleClass="blueColorLabel" text="Question :">
+               <font>
+                  <Font name="David Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="question_number_label" layoutX="511.0" layoutY="74.0" prefHeight="20.0" prefWidth="56.0" textFill="#0a79da">
+               <font>
+                  <Font name="David Bold" size="17.0" />
+               </font>
+            </Label>
+            <Button fx:id="saveBtn" layoutX="14.0" layoutY="657.0" mnemonicParsing="false" onAction="#saveBtnAction" prefHeight="25.0" prefWidth="101.0" styleClass="save-Button" text="Save" />
+            <Label fx:id="error_msg" layoutX="931.0" layoutY="637.0" prefHeight="48.0" prefWidth="453.0">
+               <font>
+                  <Font name="David" size="14.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="-6.0" prefHeight="45.0" prefWidth="1407.0" styleClass="backGround">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="558.0" layoutY="11.0" styleClass="title" text="Manage Personal Question Bank" textFill="#1693f7">
+                     <font>
+                        <Font name="David Bold" size="38.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="subjectLabel" layoutX="293.0" layoutY="13.0" prefHeight="31.0" prefWidth="234.0" styleClass="blueColorLabel" textFill="#1693f7">
+                     <font>
+                        <Font name="David Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="193.0" layoutY="11.0" prefHeight="31.0" prefWidth="88.0" styleClass="title" text="subject:">
+                     <font>
+                        <Font name="David Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="left_arrow_image" layoutX="14.0" layoutY="13.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="66.0">
+                     <styleClass>
+                        <String fx:value="backArrow-button" />
+                        <String fx:value="exit" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="1372.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="42.0" fx:id="xButton">
+                     <styleClass>
+                        <String fx:value="exit-button" />
+                        <String fx:value="exit" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane stylesheets="@../resources/cemsStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUI.connectToServerController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="cemsBackground">
+         <children>
+            <ImageView fitHeight="250.0" fitWidth="251.0" layoutX="14.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cems-logo.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="109.0" layoutY="104.0" text="Server Ip Address">
+               <styleClass>
+                  <String fx:value="blueColorLabel" />
+                  <String fx:value="bolding" />
+               </styleClass>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="ipTextField" layoutX="265.0" layoutY="103.0" promptText="xxx.xxx.xxx.xxx" styleClass="custom-text-field" text="localhost" />
+            <Button fx:id="connectButton" layoutX="265.0" layoutY="341.0" mnemonicParsing="false" onAction="#connectToServer" prefHeight="27.0" prefWidth="64.0" styleClass="save-Button" text="Connect" />
+            <Label fx:id="errorLbl" layoutX="4.0" layoutY="223.0" prefHeight="118.0" prefWidth="592.0" text="Wrong IP/Could not connect" textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="-4.0" layoutY="1.0" prefHeight="46.0" prefWidth="603.0" styleClass="backGround">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="569.0" layoutY="2.0" fx:id="xButton">
+                     <image>
+                        <Image url="@../images/X.png" />
+                     </image>
+                     <styleClass>
+                        <String fx:value="exit" />
+                        <String fx:value="exit-size" />
+                     </styleClass>
+                  </ImageView>
+                  <Label layoutX="218.0" layoutY="11.0" prefHeight="33.0" prefWidth="192.0" styleClass="title" text="Conect To Server" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

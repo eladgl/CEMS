@@ -1,0 +1,12 @@
+.introServerLabels{
+	-fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.1) , 5, 0.0 , 0 , 1 );
+}
+
+.dotSeparatorLabel {
+	-fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+}
