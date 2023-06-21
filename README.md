@@ -53,7 +53,7 @@ Here, we can see the various options a Head Department has.
 
 Lecturer view:
 
-![image](https://github.com/eladgl/CEMS/assets/59554824/7657d3be-8043-461e-8c1e-b3b896c4fdad)
+![image](https://github.com/eladgl/CEMS/assets/59554824/bce5dbc9-deb5-4460-a770-dba5735d237b)
 
 Student view:
 
