@@ -34,36 +34,47 @@ This entire project is built upon an OCSF project, taken from [source]. It utili
 
 ## Here are some screens from the project:
 ### The server:
+
 ![image](https://github.com/eladgl/CEMS/assets/59554824/f243d3b6-aa0e-4751-a80a-e95eaf53c626)
 
 When someone logs in, it looks like:
+
 ![image](https://github.com/eladgl/CEMS/assets/59554824/6eb52082-d7de-421c-93f0-16f3dcf3410c)
 
 Login page:
+
 ![image](https://github.com/eladgl/CEMS/assets/59554824/837b56b1-c681-49b0-b77b-f0f53922e624)
 
 Head Department view:
+
 ![image](https://github.com/eladgl/CEMS/assets/59554824/2ac9d9f3-a186-4903-a0de-29818f17acfa)
 
 Here, we can see the various options a Head Department has.
 
 Lecturer view:
+
 ![image](https://github.com/eladgl/CEMS/assets/59554824/7657d3be-8043-461e-8c1e-b3b896c4fdad)
 
 Student view:
+
 ![image](https://github.com/eladgl/CEMS/assets/59554824/18bdc31b-2d07-48c7-aba7-bf1d5c9c6fa3)
 
 Here, we can see an example of a test being done in a computerized way:
+
 ![image](https://github.com/eladgl/CEMS/assets/59554824/b7ae2fbf-d2aa-4e41-b784-3b6ad585ed18)
 
 And here, for example, we can see a view of tests being conducted:
+
 ![image](https://github.com/eladgl/CEMS/assets/59554824/b7c555ba-3e96-4868-b5f2-45b2a5efc3d6)
 
 Next is a view of the statistics that the Head Department can see, where almost everything is *clickable* to get more information!
+
 ![image](https://github.com/eladgl/CEMS/assets/59554824/cad4df85-40fb-49b3-84da-fae0e6508196)
 
 Lastly, a view to see how one can approve time extensions:
+
 ![image](https://github.com/eladgl/CEMS/assets/59554824/1c25d45e-8138-4a10-81ca-61b240b25022)
+
 
 A few things worth noting about this project:
 1. The connection to the server is implemented as a singleton.
